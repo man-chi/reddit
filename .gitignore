@@ -280,3 +280,7 @@ webpack-stats.json
 .env
 .envs/*
 !.envs/.local/
+
+# Virtual environment bin
+bin/
+pyvenv.cfg

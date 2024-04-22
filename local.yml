@@ -34,12 +34,14 @@ services:
       - reddit_local_postgres_data_backups:/backups
     env_file:
       - ./.envs/.local/.postgres
+    ports:
+      - '5432:5432' # Add this line to forward the PostgreSQL port
 
   mailpit:
     image: docker.io/axllent/mailpit:latest
     container_name: reddit_local_mailpit
     ports:
-      - "8025:8025"
+      - '8025:8025'
 
   node:
     build:
